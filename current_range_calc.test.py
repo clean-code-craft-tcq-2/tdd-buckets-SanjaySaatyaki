@@ -16,6 +16,9 @@ class current_range_calc_test(unittest.TestCase):
     def test_get_reading_count(self):
       self.assertTrue(current_range_calc.get_reading_count([3,4,5],self.input_lst)==4)
 
+    def test_calc_ranges_invalid(self):
+       self.assertTrue(current_range_calc.calc_ranges([3,5,7,9]) ==  {})
+
 
 if __name__ == '__main__':
   unittest.main()

@@ -15,8 +15,5 @@ def calc_ranges(lst):
     ranges = get_range(lst)
     for item in ranges:
         if len(item)!=1:
-            print(item, get_reading_count(item, lst))
             range_dict.update({(item[0],item[-1]):get_reading_count(item,lst)})
     return range_dict
-
-calc_ranges([3,3,5,4])
