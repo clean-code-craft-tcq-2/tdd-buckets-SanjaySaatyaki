@@ -27,5 +27,5 @@ def export_dict_to_csv(range_dict):
 
         writer.writeheader()
         for key in range_dict:
-            writer.writerow({'Range': key, 'Readings': range_dict[key]})
+            writer.writerow({'Range': str(key)[1:-1].replace(",","-"), 'Readings': range_dict[key]})
         return "Ranges_and_Readings.csv"
