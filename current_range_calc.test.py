@@ -17,7 +17,10 @@ class current_range_calc_test(unittest.TestCase):
       self.assertTrue(current_range_calc.get_reading_count([3,4,5],self.input_lst)==4)
 
     def test_calc_ranges_invalid(self):
-       self.assertTrue(current_range_calc.calc_ranges([3,5,7,9]) ==  {})
+      self.assertTrue(current_range_calc.calc_ranges([3,5,7,9]) ==  {})
+    
+    def test_export_dict_to_csv(self):
+      self.assertTrue(current_range_calc.export_dict_to_csv({(3,5):4})=="Ranges_and_Readings.csv")
 
 
 if __name__ == '__main__':
